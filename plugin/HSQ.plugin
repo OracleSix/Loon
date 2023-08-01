@@ -2,7 +2,7 @@
 #!desc= cron签到
 #!author= OracleSix
 #!homepage= https://github.com/OracleSix
-#!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/HSQ.jpg
+#!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/HSQ.JPG
 
 [Rule]
 DOMAIN,hashiqi.online,DIRECT
