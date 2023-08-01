@@ -1,0 +1,11 @@
+#!name= HSQ签到
+#!desc= cron签到
+#!author= OracleSix
+#!homepage= https://github.com/OracleSix
+#!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/HSQ.jpg
+
+[Rule]
+DOMAIN,hashiqi.online,DIRECT
+
+[Script]
+cron "0 10 * * *" script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/HSQ.js, timeout=10, tag=HSQ
