@@ -2,7 +2,7 @@
 #!desc= 纯净基安🫡
 #!author= OracleSix
 #!homepage= https://github.com/OracleSix
-#!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/CoolApk.jpg
+#!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/CoolApk.png
 
 [Script]
 http-response ^https:\/\/api\d*\.coolapk\.com\/v\d+\/main\/indexV\d+\? script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/CoolApk.js, requires-body=true, timeout=10, tag=CoolapkAD
