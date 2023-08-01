@@ -4,6 +4,9 @@
 #!homepage= https://github.com/OracleSix
 #!icon= https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
 
+[Rule]
+DOMAIN,yuchenios.com,DIRECT
+
 [Script]
 http-request ^https:\/\/yuchenios\.com\/\?page_id=\d+&tab=profile script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/YCCookie.js, timeout=10, tag=YCCookie
 cron "1 10 * * *" script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/YC.js, timeout=10, tag=YC
