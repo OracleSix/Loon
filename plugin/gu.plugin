@@ -1,0 +1,8 @@
+#!name= 词根词缀词典VIP
+#!desc= 通过修改gu_type获得VIP
+#!author= OracleSix
+#!homepage= https://github.com/OracleSix
+#!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/gu.jpg
+
+[Script]
+http-response http:\/\/auth\.dicts\.cn\/dict\/service\/UserCenter\/Login|GetUserInfo\.au script-path=gu.js, requires-body=true, timeout=10, enabled=true, tag=gu
