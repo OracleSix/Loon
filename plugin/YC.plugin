@@ -2,7 +2,7 @@
 #!desc= 抓取cookie和cron签到
 #!author= OracleSix
 #!homepage= https://github.com/OracleSix
-#!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/YC.jpg
+#!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/YC.png
 
 [Rule]
 DOMAIN,yuchenios.com,DIRECT
