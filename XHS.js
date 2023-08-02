@@ -13,11 +13,12 @@ console.log("弹幕已净化🤩");
 } else if (url.includes("search/notes?")) {
 obj.data.items = obj.data.items.filter(item => {return !(item.ads);});
 console.log("搜索页广告已驱逐🔍")
-} /*else if (url.includes("note/feed")||url.includes("note/redtube")||url.includes("note/videofeed")){
+} else if (url.includes("note/feed")||url.includes("note/redtube")||url.includes("note/videofeed")){
 //obj?.data?.note_list?.media_save_config?.disable_watermark=true;
 obj = JSON.stringify(obj).replace('disable_watermark":false','disable_watermark":true');
 //console.log(obj);
+obj= JSON.parse(obj);
 console.log("水印已去除🫡");
 };
-*/
+
 $done({body:JSON.stringify(obj)});
