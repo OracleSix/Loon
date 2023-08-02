@@ -1,6 +1,6 @@
 //统一获取url和body
 const url = $request.url;
-let obj = JSON.parse($response.body);
+let obj = JSON.parse(JSON.stringify($response.body));
 //-----------------------------------
 if (url.includes("homefeed?")) {
 obj.data = obj.data.filter(item => {
