@@ -1,7 +1,7 @@
 //统一获取url和body
 const url = $request.url;
 let obj = JSON.parse($response.body);
-//-----------------------------------
+
 if (url.includes("homefeed?")) {
 obj.data = obj.data.filter(item => {
 return !(item.is_tracking===true||item.is_ads===true||item.live||item.ads_info);
@@ -14,7 +14,7 @@ console.log("弹幕已净化🤩");
 obj.data.items = obj.data.items.filter(item => {return !(item.ads);});
 console.log("搜索页广告已驱逐🔍");
 } else if (url.includes("note/feed")||url.includes("note/redtube")||url.includes("note/videofeed")){
-obj.data.note_list.media_save_config.disable_watermark=1;
+obj?.data?.note_list?.media_save_config?.disable_watermark=true;
 console.log(obj);
 console.log("水印已去除🫡");
 };
