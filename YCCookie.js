@@ -1,5 +1,5 @@
-var obj = JSON.stringify($request.headers);
-var cookie = JSON.parse(obj).cookie
+let obj = JSON.stringify($request.headers);
+let cookie = JSON.parse(obj).cookie
 console.log(cookie);
 if (cookie != $persistentStore.read("YC")) {
 $persistentStore.write(cookie, "YC");
