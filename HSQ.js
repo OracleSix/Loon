@@ -27,5 +27,5 @@ const myRequest = {
 $httpClient.post(myRequest,function(error, response, data){
     console.log(data);
 });
-$notification.post('哈士奇iOS签到成功')
+$notification.post("哈士奇iOS签到成功🐕","","")
 $done({});
