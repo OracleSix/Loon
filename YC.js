@@ -28,5 +28,7 @@ const myRequest = {
 $httpClient.post(myRequest, function(errormsg,response,data){
 console.log(data);
 data.includes('success":"success')?
-$notification.post("🎉","",""):$notification.post("⛔️","","")
-})
+$notification.post("🎉","",""):$notification.post("⛔️","","");
+});
+
+$done();
