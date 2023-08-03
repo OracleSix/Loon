@@ -24,9 +24,9 @@ const myRequest = {
     body: body
 };
 //http post
-$httpClient.post(myRequest,function(error, response, data){
-    console.log(response);
-});
+$httpClient.post(myRequest, function(errormsg,response,data){
+    console.log(data)
+})
 
 $notification.post("哈士奇iOS签到成功🐕","","")
 $done({});
