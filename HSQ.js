@@ -33,4 +33,4 @@ let respond = '123456';
 console.log(respond);
 });
 
-//$done();
+$done({});
