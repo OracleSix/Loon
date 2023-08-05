@@ -25,10 +25,13 @@ const myRequest = {
 };
 //http post
 $httpClient.post(myRequest, function(errormsg,response,data){
-/*const regex = /今日已签到！已获随机金币\d+/;
-const coin = regex.exec(data);
+const regex = /恭喜你获得金币\d+/;
+const regexdone = /今日已签到！已获随机金币\d+/;
+regex.exec(data)?$notification.post("哈士奇签到成功🏆",`恭喜您:${regex.exec(data)}`,""):$notification.post("哈士奇签到成功🏆",`恭喜您:${regexdone.exec(data)}`,"");
+
+/*
+const coin = regexdone.exec(data);
 $notification.post("哈士奇签到成功🏆",`恭喜您:${coin}`,"");
 */
-console.log(data+'\n\nresponse:'+JSON.stringify(response));
 $done();
 });
