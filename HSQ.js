@@ -30,5 +30,6 @@ const coin = regex.exec(data);
 $notification.post("哈士奇签到成功🏆",`恭喜您:${coin}`,"");
 */
 console.log(data+'\n\nresponse:'+JSON.stringify(response));
-$done();
+//$done();
 });
+$done();
