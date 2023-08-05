@@ -25,9 +25,11 @@ const myRequest = {
 };
 //http post
 $httpClient.post(myRequest, function(errormsg,response,data){
-const regex = /今日已签到！已获随机金币\d+/;
+/*const regex = /今日已签到！已获随机金币\d+/;
 const coin = regex.exec(data);
 $notification.post("哈士奇签到成功🏆",`恭喜您:${coin}`,"");
+*/
+console.log(data);
 });
 
 $done();
