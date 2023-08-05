@@ -31,6 +31,5 @@ $notification.post("哈士奇签到成功🏆",`恭喜您:${coin}`,"");
 */
 let respond = '123456';
 console.log(respond);
+$done();
 });
-
-$done({});
