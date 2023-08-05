@@ -29,7 +29,6 @@ $httpClient.post(myRequest, function(errormsg,response,data){
 const coin = regex.exec(data);
 $notification.post("哈士奇签到成功🏆",`恭喜您:${coin}`,"");
 */
-let respond = '123456';
-console.log(respond);
+console.log(data+'\n\n response:'+response);
 $done();
 });
