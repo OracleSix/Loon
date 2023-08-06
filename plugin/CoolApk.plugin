@@ -9,5 +9,3 @@ http-response ^https:\/\/api\d*\.coolapk\.com\/v\d+\/(main\/indexV\d+|feed\/repl
 
 [MITM]
 hostname = api*.coolapk.com
-
-							https://api.coolapk.com/v6/feed/replyList?
