@@ -10,5 +10,6 @@ if (url.includes("main/index")) {
     $done({body:JSON.stringify(obj)});
 } else if (url.includes("feed/replyList")) {
     obj = JSON.stringify(obj).replace(/sponsor/g,"spons");
+    console.log("酷安回复页广告已去除🦏");
     $done({body:obj});
 }
