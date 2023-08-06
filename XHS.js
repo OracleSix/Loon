@@ -20,9 +20,22 @@ obj.data.items = obj.data.items.filter(item => {return !(item.ads);});
 console.log("搜索页广告已驱逐🔍");
 $done({body:JSON.stringify(obj)});
 } else if (url.includes("splash_config")) {
-obj = obj.replace(/ads_groups/g,"a_gro");
-console.log("开屏广告已屏蔽🥊");
-$done({body:obj});
+// 开屏广告
+obj = JSON.parse(obj);//JSON类型
+  if (obj.data?.ads_groups) {
+    obj.data.ads_groups.forEach((i) => {
+      i.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+      i.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+      if (i.ads) {
+        i.ads.forEach((j) => {
+          j.start_time = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
+          j.end_time = 2209046399; // Unix 时间戳 2040-01-01 23:59:59
+        });
+      }
+    });
+  }
+console.log("开屏广告已屏蔽🍑");
+$done({body:JSON.stringify(obj)});
 }else if (url.includes("note/feed")||url.includes("note/redtube")||url.includes("note/videofeed")) {
 obj = obj.replace('disable_watermark":false','disable_watermark":true');
 console.log("水印已去除🫡");
