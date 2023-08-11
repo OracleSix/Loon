@@ -30,6 +30,6 @@
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? reject-dict
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? reject-dict
 [Script]
-http-response ^https:\/\/(api|wbapp\.uve)\.weibo\.(cn|com)\/(\d+\/(comments\/build_comments\?|statuses\/extend?|messageflow\/notice\?|statuses\/container_timeline_hot\?|profile\/container_timeline\?|statuses/container_timeline_unread\?|profile/userinfo?)|wbapplua\/wbpullad\.lua\?) script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/weibo.js, requires-body=true, timeout=10, tag=微博去广告
+http-response ^https:\/\/(api|wbapp\.uve)\.weibo\.(cn|com)\/(\d+\/(comments\/build_comments\?|statuses\/extend?|messageflow\/notice\?|statuses\/container_timeline_hot\?|profile\/container_timeline\?|statuses/container_timeline_unread\?|profile/me?)|wbapplua\/wbpullad\.lua\?) script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/weibo.js, requires-body=true, timeout=10, tag=微博去广告
 [MITM]
 hostname = card.weibo.com,*uve.weibo.com,api.weibo.cn,weibo.com
