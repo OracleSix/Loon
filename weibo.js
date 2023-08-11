@@ -28,7 +28,7 @@ obj = JSON.parse(obj);
 obj.items = obj.items.filter(item => !item.data?.mblogtypename);
 console.log("微博个人主页信息流广告已屏蔽🤠");
 $done({body:JSON.stringify(obj)}); 
-} if (url.includes("profile/me")) {
+} else if (url.includes("profile/me")) {
 obj = obj.replace(/vipView/,"vipVi");
 obj = JSON.parse(obj);
 delete obj.items[2];
