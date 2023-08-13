@@ -1,0 +1,11 @@
+#!name= QSearch
+#!desc= 🧰快捷转化搜索引擎
+#!author= OracleSix
+#!homepage= https://github.com/OracleSix
+#!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/QSearch.png
+
+[Rewrite]
+^https:\/\/m\.baidu\.com/s\?from=(.+)&word=g\+([^&]+) 302 https://www.google.com/search?q=$2
+
+[MITM]
+hostname = m.baidu.com
