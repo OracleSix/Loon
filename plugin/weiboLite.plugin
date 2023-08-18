@@ -4,10 +4,8 @@
 #!homepage= https://github.com/OracleSix
 #!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/weiboLite.png
 [Rewrite]
+^https:\/\/tqt\.weibo\.cn\/api\/fortune\/decisionMaker\/1\.1\/\? reject-200
 ^https:\/\/api\.weibo\.cn\/\d+\/ad\/weibointl\? reject-dict
-
-[Script]
-http-response ^https:\/\/tqt\.weibo\.cn\/api\/fortune\/decisionMaker\/1\.1\/\? script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/YC.js, timeout=10, tag=微博轻享版去广告
 
 [MITM]
 hostname = api.weibo.cn,tqt.weibo.cn
