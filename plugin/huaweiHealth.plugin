@@ -1,0 +1,15 @@
+#!name= 华为运动健康去广告
+#!desc= 推荐活动广告、vmall商店去除。
+#!author= OracleSix
+#!homepage= https://github.com/OracleSix
+#!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/huaweiHealth.png
+
+[Rule]
+DOMAIN,sportsuggest.dbankcloud.cn,REJECT
+DOMAIN,operationposition-drcn.things.dbankcloud.cn,REJECT
+
+[Script]
+http-response ^https:\/\/openapi\.vmall\.com\/mcp\/content\/getPageInfoListAsync\? script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/huaweiHealth.js, requires-body=true, timeout=10, tag=华为运动健康vmall
+
+[MITM]
+hostname = openapi.vmall.com
