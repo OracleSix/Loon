@@ -1,0 +1,11 @@
+#!name= Light
+#!desc= 💳Light壁纸会员
+#!author= OracleSix
+#!homepage= https://github.com/OracleSix
+#!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/light.png
+
+[Script]
+http-response ^https:\/\/api\.revenuecat\.com\/v1\/receipts script-path=motivation.js, requires-body=true, timeout=10, tag=Light壁纸会员
+
+[MITM]
+hostname = api.revenuecat.com
