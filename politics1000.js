@@ -1,5 +1,5 @@
 const url = $request.url;
-let obj = $request.body;
+let obj = $response.body;
 
 if (url.includes("unlockCourse")) {
 obj = JSON.parse(obj);
