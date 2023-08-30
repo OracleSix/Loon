@@ -1,0 +1,11 @@
+#!name= 考虫政治1000题
+#!desc= 💳解锁全部题目
+#!author= OracleSix
+#!homepage= https://github.com/OracleSix
+#!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/politics1000.png
+
+[Script]
+http-response ^https:\/\/politics1000\.kaochong\.com\/politics1000\/indexInfo\? script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/politics1000.js, requires-body=true, timeout=10, tag=upValue
+http-response ^https:\/\/politics1000\.kaochong\.com\/politics1000\/unlockCourse\? script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/politics1000.js, requires-body=true, timeout=10, tag=unlock_response
+[MITM]
+hostname = politics1000.kaochong.com
