@@ -8,7 +8,7 @@
 ^https:\/\/tqt\.weibo\.cn\/api\/fortune\/decisionMaker\/\d+\.\d+\/\? reject-200
 #开屏广告
 #^https:\/\/api\.weibo\.cn\/\d+\/ad\/weibointl\? reject-200
-^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php reject-200
+#^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php reject-200
 
 [MITM]
-hostname = tqt.weibo.cn,sdkapp.uve.weibo.com
+hostname = tqt.weibo.cn
