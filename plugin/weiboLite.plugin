@@ -11,4 +11,4 @@
 #^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php reject-200
 
 [MITM]
-hostname = tqt.weibo.cn
+hostname = tqt.weibo.cn,api.weibo.cn
