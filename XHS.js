@@ -11,12 +11,12 @@ console.log("主页广告已屏蔽🥰");
 $done({body:JSON.stringify(obj)});
 } else if (url.includes("get_danmaku?")) {
 obj = JSON.parse(obj);//JSON类型
-obj.data.infos = obj.data.infos.filter(item => {return !(/厄运|恶运|噩运|邪运|走开|..走./.test(item.content))});
+obj.data.infos = obj.data.infos.filter(item => {!/(厄运|恶运|噩运|邪运|走开|..走.)/.test(item.content)});
 console.log("弹幕已净化🤩");
 $done({body:JSON.stringify(obj)});
 } else if (url.includes("search/notes?")) {
 obj = JSON.parse(obj);//JSON类型
-obj.data.items = obj.data.items.filter(item => {return !(item.ads);});
+obj.data.items = obj.data.items.filter(item => {!item.ads;});
 console.log("搜索页广告已驱逐🔍");
 $done({body:JSON.stringify(obj)});
 } else if (url.includes("splash_config")) {
