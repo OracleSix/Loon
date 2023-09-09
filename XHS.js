@@ -5,7 +5,7 @@ let obj = $response.body;
 if (url.includes("homefeed?")) {
 obj = JSON.parse(obj);//JSON
 //return !(item.is_tracking===true||item.is_ads===true||item.live||item.ads_info);
-obj.data = obj.data.filter(item => {!(item.is_tracking == true||item.is_ads == true||item.ads_info);});
+obj.data = obj.data.filter(item => {!(item.is_tracking == true||item.is_ads == true);});
 console.log("主页广告已屏蔽🥰");
 $done({body:JSON.stringify(obj)});
 } else if (url.includes("get_danmaku?")) {
