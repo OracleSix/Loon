@@ -4,14 +4,14 @@
 #!homepage= https://github.com/OracleSix
 #!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/weiboLite.png
 [Rewrite]
-#信息流
-#^https://tqt\.weibo\.cn/api/fortune/decisionMaker/\d+\.\d+/\? reject-200
+#informationFlow(信息流）
 ^https://api\.weibo\.cn/\d+/ad/ reject-200
-#开屏广告
-#^https://sdkapp\.uve\.weibo\.com/interface/sdk/sdkad\.php reject-200
 
 [Script]
-http-response ^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_coopen_ads script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/weiboLite.js, requires-body=true, timeout=10, tag=weiboLite
+#Startup
+http-response ^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_coopen_ads script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/weiboLite.js, requires-body=true, timeout=10, tag=weiboLiteStarup
+#banner
+http-response ^https://weibointl\.api\.weibo\.cn/portal\.php\?a=open_app&ct=user&auth script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/weiboLite.js, requires-body=true, timeout=10, tag=weiboLiteBanner
 
 [MITM]
 hostname = api.weibo.cn,weibointl.api.weibo.cn
