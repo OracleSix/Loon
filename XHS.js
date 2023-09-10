@@ -36,10 +36,12 @@ obj = JSON.parse(obj);//JSON类型
   }
 //console.log("\n🍑小红书开屏广告已屏蔽");
 $done({body:JSON.stringify(obj)});
-} else if ($argument=="noWaterMark") {
-  if (url.includes("note/feed")||url.includes("note/redtube")||url.includes("note/videofeed")) {
+} else if (url.includes("note/feed")||url.includes("note/redtube")||url.includes("note/videofeed")) {
+  if ($argument=="noWaterMark") {
   obj = obj.replace('disable_watermark":false','disable_watermark":true');  
   //console.log("\n水印已去除🫡");
     $done({body:obj});
+} else {
+    $done({});
 };
 };
