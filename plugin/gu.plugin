@@ -5,4 +5,4 @@
 #!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/gu.png
 
 [Script]
-http-response http:\/\/auth\.dicts\.cn\/dict\/service\/UserCenter\/Login|GetUserInfo\.au script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/gu.js, requires-body=true, timeout=10, enabled=true, tag=gu
+http-response http://auth\.dicts\.cn/dict/service/UserCenter/Login|GetUserInfo\.au script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/gu.js, requires-body=true, timeout=10, enabled=true, tag=gu
