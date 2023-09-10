@@ -5,10 +5,10 @@
 #!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/weiboLite.png
 [Rewrite]
 #信息流
-^https:\/\/tqt\.weibo\.cn\/api\/fortune\/decisionMaker\/\d+\.\d+\/\? reject-200
-^https:\/\/api\.weibo\.cn\/\d+\/ad\/weibointl\? reject-200
+^https://tqt\.weibo\.cn/api/fortune/decisionMaker/\d+\.\d+/\? reject-200
+^https://api\.weibo\.cn/\d+/ad/weibointl\? reject-200
 #开屏广告
-#^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php reject-200
+#^https://sdkapp\.uve\.weibo\.com/interface/sdk/sdkad\.php reject-200
 
 [MITM]
 hostname = tqt.weibo.cn,api.weibo.cn
