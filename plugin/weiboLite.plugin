@@ -9,7 +9,7 @@
 
 [Script]
 #Startup
-http-response ^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_coopen_ads script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/weiboLite.js, requires-body=true, timeout=10, tag=weiboLiteStarup
+http-response ^https://weibointl\.api\.weibo\.cn/portal\.php\?a=get_coopen_ads script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/weiboLite.js, requires-body=true, timeout=10, tag=weiboLiteStarup
 #banner
 http-response ^https://weibointl\.api\.weibo\.cn/portal\.php\?a=open_app&ct=user&auth script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/weiboLite.js, requires-body=true, timeout=10, tag=weiboLiteBanner
 
