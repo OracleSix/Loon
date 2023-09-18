@@ -4,6 +4,7 @@ let obj = $response.body;
 if (url.includes('subscribers')) {
 //subscription,自动获取的。很重要‼️
 obj = JSON.parse($response.body);
+!obj.offerings || $done({});
 const data = {
     "expires_date": "2099-09-23T07:24:33Z",
     "original_purchase_date": "2023-08-23T07:21:06Z",
