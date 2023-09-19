@@ -6,7 +6,7 @@ if (url.includes("topstory")) {
    !(undefined == $prefs.setValueForKey(obj,"topStory"))||$prefs.setValueForKey(obj,"topStory");
     obj = $prefs.valueForKey("topStory");
     $done({body:obj});
-} else (url.includes("feed")) {
+} else if (url.includes("feed")) {
     let obj = $response.body;
 obj = obj.replace(/全站/gi," ");
 obj = obj.replace(/直播/gi," ");
