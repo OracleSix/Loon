@@ -1,6 +1,6 @@
-; hostname line is optional.
 hostname = *zhihu*
+
 ^https://api\d?\.zhihu\.com/feed\-root/sections/submit/v\d+\?city= url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/demo2.js
 ^https://api\d?\.zhihu\.com/feed/render/tab/config\?city= url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/demo2.js
 ^https://api\.zhihu\.com/topstory/recommend\? url response-body fresh_text response-body fresh_tex
-^https://api\d?\.zhihu\.com/topstory/recommend\? url script-response-body demo2.js
+^https://api\d?\.zhihu\.com/topstory/recommend\? url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/demo2.js
