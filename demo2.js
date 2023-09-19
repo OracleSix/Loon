@@ -3,7 +3,7 @@ const url = $request.url;
 let obj = $response.body;
 
 if (url.includes("topstory")) {
-    $prefs.setValueForKey(obj, "topStory");
+   !(undefined == $prefs.setValueForKey(obj,"topStory"))||$prefs.setValueForKey(obj,"topStory");
     obj = $prefs.valueForKey("topStory");
     $done({body:obj});
 } else (url.includes("feed")) {
