@@ -7,7 +7,7 @@ if (url.includes("topstory")) {
     obj = $prefs.valueForKey("topStory");
     $done({body:obj});
 } else if (url.includes("feed")) {
-    let obj = $response.body;
+
 obj = obj.replace(/全站/gi," ");
 obj = obj.replace(/直播/gi," ");
 obj = obj.replace(/职场季/gi," ");
