@@ -3,9 +3,11 @@ const url = $request.url;
 let obj = $response.body;
 
 if (url.includes("topstory")) {
-   !(undefined == $prefs.setValueForKey(obj,"topStory"))||$prefs.setValueForKey(obj,"topStory");
-    obj = $prefs.valueForKey("topStory");
-    $done({body:obj});
+   /*!(undefined == $prefs.setValueForKey(obj,"topStory"))||$prefs.setValueForKey(obj,"topStory");
+    obj = $prefs.valueForKey("topStory");*/
+    obj = JSON.parse(obj);
+    obj.data = [];
+    $done({body:JSON.stringify(obj)});
 } else if (url.includes("feed")) {
 
 obj = obj.replace(/全站/gi," ");
