@@ -1,0 +1,5 @@
+{
+    "rewrite_remote": [
+        "https://raw.githubusercontent.com/OracleSix/Loon/main/zhihu.snippet, tag=zhihu"
+    ]
+}
