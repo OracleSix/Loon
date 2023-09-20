@@ -6,3 +6,11 @@ hostname = *zhihu*
 ^https://api\.zhihu\.com/root/window url reject-dict
 ^https://api\.zhihu\.com/topstory/hot\-lists/total\? url reject-dict
 ^https://api\.zhihu\.com/search/preset_words url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/demo2.js
+
+# 📝
+// >开屏广告
+^https://api\.zhihu\.com/commercial_api/real_time_launch_v\d+ url reject
+// >帖子下方推荐广告
+^https://www\.zhihu\.com/api/v\d+/(articles|answers)/\d+/recommendation url reject
+// >问题详情页广告
+^https://api\.zhihu\.com/questions/\d+/feeds\? url response-body ad_info response-body ad_in
