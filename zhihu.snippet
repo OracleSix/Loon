@@ -1,11 +1,10 @@
-hostname = *zhihu*
+hostname = api*.zhihu.com,www.zhihu.com
 
-^https://api\d?\.zhihu\.com/feed\-root/sections/submit/v\d+\?city= url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/demo2.js
-^https://api\d?\.zhihu\.com/feed/render/tab/config\?city= url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/demo2.js
-^https://api\d?\.zhihu\.com/topstory/recommend\? url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/demo2.js
-^https://api\.zhihu\.com/root/window url reject-dict
-#^https://api\.zhihu\.com/topstory/hot\-lists/total\? url reject-dict
-^https://api\.zhihu\.com/search/preset_words url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/demo2.js
+#☕
+^https://api\d?\.zhihu\.com/feed\-root/sections/submit/v\d+\?city= url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/zhihu.js
+^https://api\d?\.zhihu\.com/feed/render/tab/config\?city= url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/zhihu.js
+^https://api\d?\.zhihu\.com/topstory/recommend\? url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/zhihu.js
+^https://api\.zhihu\.com/search/preset_words url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/zhihu.js
 
 # 📝
 // >开屏广告
@@ -14,3 +13,7 @@ hostname = *zhihu*
 ^https://www\.zhihu\.com/api/v\d+/(articles|answers)/\d+/recommendation url reject
 // >问题详情页广告
 ^https://api\.zhihu\.com/questions/\d+/feeds\? url response-body ad_info response-body ad_in
+//热搜(暂不启用)
+#^https://api\.zhihu\.com/topstory/hot\-lists/total\? url reject-dict
+//推荐页面横幅窗口
+^https://api\.zhihu\.com/root/window url reject-dict
