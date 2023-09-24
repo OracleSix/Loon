@@ -4,7 +4,7 @@ hostname = *zhihu*
 ^https://api\d?\.zhihu\.com/feed/render/tab/config\?city= url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/demo2.js
 ^https://api\d?\.zhihu\.com/topstory/recommend\? url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/demo2.js
 ^https://api\.zhihu\.com/root/window url reject-dict
-^https://api\.zhihu\.com/topstory/hot\-lists/total\? url reject-dict
+#^https://api\.zhihu\.com/topstory/hot\-lists/total\? url reject-dict
 ^https://api\.zhihu\.com/search/preset_words url script-response-body https://raw.githubusercontent.com/OracleSix/Loon/main/demo2.js
 
 # 📝
