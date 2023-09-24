@@ -1,0 +1,25 @@
+#!name= 知乎去广告
+#!desc= ⛔️纯净知乎🥳开屏广告、主页等
+#!author= OracleSix
+#!homepage= https://github.com/OracleSix
+#!icon= https://raw.githubusercontent.com/OracleSix/Loon/main/icon/zhihu.png
+[Rewrite]
+# >开屏广告
+^https://api\.zhihu\.com/commercial_api/real_time_launch_v\d+ reject-200
+# >帖子下方推荐广告
+^https://www\.zhihu\.com/api/v\d+/(articles|answers)/\d+/recommendation reject-200
+# >问题详情页广告
+#^https://api\.zhihu\.com/questions/\d+/feeds\? url response-body ad_info response-body ad_in
+#热搜(暂不启用)
+#^https://api\.zhihu\.com/topstory/hot\-lists/total\? reject-dict
+#推荐页面横幅窗口
+^https://api\.zhihu\.com/root/window reject-dict
+
+[Script]
+http-response ^https://api\d?\.zhihu\.com/feed\-root/sections/submit/v\d+\?city= script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/zhihu.js, requires-body=true,timeout=10, tag=zhihuAD
+http-response ^https://api\d?\.zhihu\.com/feed/render/tab/config\?city= script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/zhihu.js, requires-body=true,timeout=10, tag=zhihuAD
+http-response ^https://api\d?\.zhihu\.com/topstory/recommend\? script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/zhihu.js, requires-body=true,timeout=10, tag=主页推荐
+http-response ^https://api\.zhihu\.com/search/preset_words script-path=https://raw.githubusercontent.com/OracleSix/Loon/main/zhihu.js, requires-body=true,timeout=10, tag=搜索框预设词
+
+[MITM]
+hostname = api*.zhihu.com,www.zhihu.com
