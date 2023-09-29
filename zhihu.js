@@ -2,7 +2,7 @@
 const url = $request.url;
 let obj = $response.body;
 
-if (url.includes("老师")) {
+if (url.includes("topstory/recommend")) {
    /*!(undefined == $prefs.setValueForKey(obj,"topStory"))||$prefs.setValueForKey(obj,"topStory");
     obj = $prefs.valueForKey("topStory");*/
     obj = JSON.parse(obj);
