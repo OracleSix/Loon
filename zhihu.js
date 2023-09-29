@@ -10,7 +10,7 @@ if (url.includes("topstory/recommend")) {
     obj.fresh_text = ' ';
     $done({body:JSON.stringify(obj)});
 } else if (url.includes("feed/render/tab")) {
-
+obj = JSON.parse(obj);
 //obj = obj.replace(/全站/gi," ");
 //obj = obj.replace(/直播/gi," ");
 //obj = obj.replace(/职场季/gi," ");
@@ -21,7 +21,7 @@ obj.selected_sections = [];
 obj.guess_like_sections = [];
 obj.more_sections = [];
 
-$done({body:obj});    
+$done({body:JSON.stringify(obj)});    
 } else if (url.includes('preset_words')) {
     obj = JSON.parse(obj);
     obj.preset_words = {};
