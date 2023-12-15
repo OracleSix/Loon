@@ -6,9 +6,9 @@
 
 [Rewrite]
 #bing -> google
-^https://(cn|www)\.bing\.com/search\?q=g\+([^&]+)&form=(.+) 302 https://www.google.com/search?q=$1
+^https://(cn|www)\.bing\.com/search\?q=g\+([^&]+)&form=(.+) 302 https://www.google.com/search?q=$2
 #bing -> baidu
-^https://(cn|www)\.bing\.com/search\?q=bd\+([^&]+)&form=(.+) 302 https://m.baidu.com/s?from=$2&word=$1
+^https://(cn|www)\.bing\.com/search\?q=bd\+([^&]+)&form=(.+) 302 https://m.baidu.com/s?from=$3&word=$2
 
 [MITM]
 hostname = cn.bing.com,www.bing.com
